@@ -1,0 +1,242 @@
+
+
+/* HOME =================== */
+#home {
+    overflow: hidden;
+    height: 100vh;
+
+    position: relative;
+
+    background: #f3f3f3;
+
+    background: radial-gradient(circle, #F0F0F0 0%, #E4F1F8 100%);
+
+    border-radius: 0 0 5rem 5rem;
+}
+
+#home .content {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 5rem;
+}
+
+#home .content .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-top: -70%;
+
+    position: relative;
+    z-index: 1;
+}
+
+#home h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 3rem;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+}
+
+#home h1 img.line {
+    display: none;
+}
+
+#home h1 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+#home p span {
+    font-weight: 600;
+}
+
+#home a button {
+    color: #fff;
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#home a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+#home .image {
+    width: 100%;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#home .image img.principal {
+    width: 80%;
+    z-index: 2;
+}
+
+#home .image img.esquerda {
+    width: 50%;
+    margin-right: -20%;
+    transform: rotate(-10deg);
+
+    filter: blur(.5px);
+}
+
+#home .image img.direita {
+    width: 50%;
+    margin-left: -20%;
+    transform: rotate(10deg);
+
+    filter: blur(.5px);
+}
+
+#home img.frutas {
+    position: absolute;
+    height: 70%;
+    object-fit: cover;
+
+    bottom: 7%;
+    left: 45%;
+    transform: translate(-50%, 0) rotate(-90deg);
+    z-index: 0;
+    filter: blur(2px);
+    opacity: .6;
+}
+
+#home img.frutas:nth-child(2) {
+    display: none;
+}
+
+@media (min-width: 1080px) {  
+    header#home {
+        min-height: 100vh;
+
+        border-radius: 0 0 12rem 12rem;
+
+        -webkit-box-shadow: 0px 7px 75px 0px rgba(0, 0, 0, 0.108);
+        -moz-box-shadow: 0px 7px 75px 0px rgba(0, 0, 0, 0.153);
+        box-shadow: 0px 7px 75px 0px rgba(0, 0, 0, 0.169);
+    }
+
+    /* header#home img.frutas {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        mask-image: linear-gradient(to right, #000, #00000000);
+        opacity: .1;
+    } */
+
+    header#home img.frutas {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+
+        bottom: -40%;
+        left: -10%;
+        z-index: 0;
+
+        transform: rotate(-45deg);
+
+        filter: blur(4px);
+        opacity: 1;
+    }
+
+    header#home img.frutas:nth-child(2) {
+        display: inherit;
+        left: initial;
+        right: -10%;
+        transform: rotate(-125deg);
+    }
+
+    header#home .content .text {
+        margin-top: -25%;
+    }
+
+    header#home .content .text h1 {
+        font-size: 7rem;
+        margin-bottom: 2rem;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    header#home .content .text h1 img.line {
+        display: inherit;
+        position: absolute;
+        left: 33.5%;
+        bottom: -8%;
+        z-index: -1;
+    }
+
+    header#home .content .text p {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    header#home .content .text a button {
+        font-size: 2.5rem;
+        padding: 1rem 5rem;
+    }
+
+    header#home .image {
+        bottom: -20%;
+    }
+
+    header#home .image img.principal {
+        width: 30%;
+        z-index: 2;
+    }
+    
+    header#home .image img.esquerda {
+        width: 25%;
+        margin-right: -45%;
+        margin-bottom: -3%;
+        transform: rotate(10deg);
+    
+        filter: blur(2px);
+    }
+    
+    header#home .image img.direita {
+        width: 25%;
+        margin-left: -45%;
+        margin-bottom: -3%;
+        transform: rotate(-10deg);
+    
+        filter: blur(2px);
+    }
+}
+

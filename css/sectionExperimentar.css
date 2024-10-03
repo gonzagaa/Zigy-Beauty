@@ -1,0 +1,131 @@
+#experimentar {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-gradient);
+}
+
+#experimentar .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#experimentar header {
+    margin-bottom: 5rem;
+}
+
+#experimentar header h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+#experimentar header h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#experimentar .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#experimentar .cards .card {
+    position: relative;
+}
+
+#experimentar .cards .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+
+    border-radius: 2rem 2rem 0 0;
+}
+
+#experimentar .cards .card .text {
+    text-align: center;
+}
+
+#experimentar .cards .card .text h3 {
+    font-size: 2rem;
+    color: var(--blue-medio);
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, 0);
+    width: 85%;
+    background: var(--bg-gradient);
+    padding-block: 1rem;
+
+    border-radius: 1rem;
+}
+
+#experimentar .cards .card .text h3 span {
+    color: var(--blue);
+}
+
+#experimentar .cards .card .text p {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+#experimentar a button {
+    margin-top: 7rem;
+    color: #fff;
+
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#experimentar a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+
+@media (min-width: 1080px) {
+    section#experimentar .content header {
+        margin-bottom: 8rem;
+    }
+
+    section#experimentar .content header h2 {
+        font-size: 5.5rem;
+    }
+
+    section#experimentar .content a button {
+        margin-top: 7rem;
+        font-size: 2.5rem;
+        padding: 1rem 5rem;
+    }
+
+    section#experimentar .content .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section#experimentar .content .card .text h3 {
+        font-size: 3rem;
+        top: 79%;
+    }
+
+    section#experimentar .content .card .text p {
+        margin-top: 3rem;
+        font-size: 1.8rem;
+    }
+}

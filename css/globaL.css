@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --gray: #252526;
+    --white: #c9c9c9;
+    --paragraphy: #929292;
+
+    --blue: #6D24FB;
+    /* --gradient: linear-gradient(to right, #7bbbde, #A2CFE7); */
+    --gradient: linear-gradient(45deg, #2AF9E1, #8e56fd);
+    --bg-gradient: linear-gradient(to right,#e9fefc 0%, #f0e9fe 100%);
+
+    --blue-medio: #18252C;
+    --blue-black: #0C1216;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+  
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+  
+section {
+  padding-block: 8rem;
+}
+
+::selection {
+  color: #000000;
+  background: #d8d8d8;
+}
+
+  .wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+
+  /*====  MEDIAS RESPONSIVES ============================ */
+  @media (min-width: 1080px) {
+    .wrapper {
+      width: min(90rem, 100%);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .wrapper {
+      width: min(120rem, 100%);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper {
+      width: min(130rem, 100%);
+    }
+
+    :root {
+      font-size: 65%;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+  }
+
+  /*====  scrollbar ============================ */
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  width: .6rem;
+  background: var(--gradient);
+  border-radius: 1rem;
+}

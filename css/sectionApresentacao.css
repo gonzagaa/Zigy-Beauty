@@ -1,0 +1,141 @@
+#apresentacao {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--bg-gradient);
+}
+
+#apresentacao .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#apresentacao .text h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+}
+
+#apresentacao .text h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#apresentacao .text p {
+    color: var(--blue-medio);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+#apresentacao .text p span {
+    font-weight: 600;
+}
+
+#apresentacao .text a button {
+    color: #fff;
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#apresentacao .text a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+#apresentacao .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+#apresentacao .image img.mulher {
+    width: 80%;
+
+    mask-image: linear-gradient(to bottom, #fff 90% , transparent);
+    animation: mulher infinite ease-in-out 15s;
+}
+
+#apresentacao .image img.fruta {
+    animation: fruta infinite ease-in-out 10s;
+}
+
+#apresentacao .image img.fruta.um {
+    position: absolute;
+    width: 20rem;
+    left: -10%;
+    bottom: -10%;
+}
+
+#apresentacao .image img.fruta.dois {
+    position: absolute;
+    width: 18rem;
+    right: -8%;
+    bottom: -10%;
+}
+
+@media (min-width: 1080px) {
+    section#apresentacao .content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 8rem;
+    }
+
+    section#apresentacao .content .text {
+        align-items: start;
+        text-align: left;
+    }
+
+    section#apresentacao .content .text h2 {
+        font-size: 5.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section#apresentacao .content .text p {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    section#apresentacao .content .text a button {
+        font-size: 2.5rem;
+        padding: 1rem 5rem;
+    }
+
+    section#apresentacao .image img.fruta.um {
+        width: 35rem;
+    } 
+
+    section#apresentacao .image img.fruta.dois {
+        width: 30rem;
+        bottom: -12%;
+    } 
+}
+
+@keyframes mulher {
+    50% {
+        transform: translateY(-15px) scale(1.1);
+    }
+}
+
+@keyframes fruta {
+    50% {
+        transform: translateY(-25px) scale(1.05);
+    }
+}

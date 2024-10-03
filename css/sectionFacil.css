@@ -1,0 +1,117 @@
+#facil {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--bg-gradient);
+}
+
+#facil .content {
+    background-color: rgba(203, 227, 255, 0.619);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 3rem;
+    border-radius: 1rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#facil .content .text {
+    position: relative;
+    z-index: 1;
+}
+
+#facil .content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--blue-medio);
+}
+
+#facil .content h2 span {
+    font-weight: 800;
+}
+
+#facil .content p {
+    font-size: 1.6rem;
+    color: var(--blue-medio);
+}
+
+#facil .content p span {
+    font-weight: 600;
+}
+
+#facil .content a button {
+    margin-top: 3rem;
+    color: #fff;
+
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#facil .content a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+#facil .content img.frutas {
+    position: absolute;
+    width: 100%;
+    left: -20%;
+    z-index: 0;
+    mix-blend-mode: hard-light;
+    opacity: .2;
+    mask-image: linear-gradient(to right, #000, transparent);
+}
+
+#facil .content img.frutas.dois {
+    position: absolute;
+    width: 100%;
+    left: initial;
+    right: -20%;
+    transform: rotate(-180deg);
+    z-index: 0;
+    mix-blend-mode: hard-light;
+    opacity: .2;
+    mask-image: linear-gradient(to left, #000 40%, transparent);
+}
+
+@media (min-width: 1080px) {
+    section#facil .content {
+        padding: 7rem;
+        border-radius: 2rem;
+    }
+
+    section#facil .content .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    section#facil .content h2 {
+        font-size: 4rem;
+    }
+    
+    section#facil .content p {
+        font-size: 2rem;
+        width: 80%;
+    }
+    
+    section#facil .content a button {
+        margin-top: 4rem;
+        font-size: 2.5rem;
+        padding: 1rem 5rem;
+    }
+}

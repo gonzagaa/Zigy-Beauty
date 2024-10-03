@@ -1,0 +1,157 @@
+#beneficios {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-gradient);
+}
+
+#beneficios .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#beneficios header {
+    margin-bottom: 5rem;
+}
+
+#beneficios header h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+#beneficios header h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#beneficios .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#beneficios .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+
+    box-shadow:  11px 11px 21px #c2cdd3b3,
+             -11px -11px 21px #ffffff33;
+}
+
+#beneficios .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background: linear-gradient(45deg, #fcfcfceb 0%, #e4f1f8eb 100%);
+
+    z-index: 1;
+}
+
+#beneficios .card img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#beneficios .card .text {
+    padding: 3rem;
+    text-align: left;
+
+    position: relative;
+    z-index: 2;
+}
+
+#beneficios .card h3 {
+    color: var(--blue-medio);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#beneficios .card h3 span {
+    font-weight: 800;
+}
+
+#beneficios .card p {
+    color: var(--blue-medio);
+    font-size: 1.6rem
+}
+
+#beneficios a button {
+    margin-top: 4rem;
+    color: #fff;
+
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#beneficios a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+@media (min-width: 1080px) {
+    section#beneficios .content .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section#beneficios .content header {
+        margin-bottom: 6rem;
+    }
+
+    section#beneficios .content header h2 {
+        font-size: 5.5rem;
+    }
+
+    section#beneficios .content a button {
+        margin-top: 8rem;
+        font-size: 2.5rem;
+        padding: 1rem 5rem;
+    }
+
+    section#beneficios .cards .card {
+        height: 100%;
+    }
+
+    section#beneficios .cards .card .text {
+        text-align: center;
+        padding: 4rem;
+    }
+
+    section#beneficios .cards .card h3 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    section#beneficios .cards .card p {
+        font-size: 1.6rem;
+    }
+}
