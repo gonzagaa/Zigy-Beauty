@@ -1,0 +1,178 @@
+#planos {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-gradient);
+}
+
+#planos .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#planos header {
+    margin-bottom: 5rem;
+}
+
+#planos header h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+#planos header h2 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#planos .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#planos .cards .card {
+    position: relative;
+
+    padding: 3rem;
+    border-radius: 1rem;
+    
+    background: linear-gradient(45deg, #fff, #e8e8e8);
+}
+
+#planos .card img.logo {
+    width: 8rem;
+    margin-bottom: 2rem;
+}
+
+#planos .card h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 1rem;
+
+}
+
+#planos .card h3 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#planos .card .image img {
+    width: 70%;
+}
+
+#planos .card .price {
+    margin-top: 2rem;
+}
+
+#planos .card .price h5 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#planos .card .price h5 span {
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+#planos .card .price h4 {
+    font-size: 5rem;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: var(--blue-medio);
+}
+
+#planos .card .price h4 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+}
+
+#planos .card a button {
+    color: #fff;
+
+    margin-top: 3rem;
+    width: 100%;
+    border: none;
+    background: var(--gradient);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#planos .content a button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+#planos .content .card.maisvendido {
+    border: 2px solid #8e56fd;
+}
+
+#planos .content .card.maisvendido h6 {
+    position: absolute;
+    color: #fff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.4rem;
+    background: var(--gradient);
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 1080px) {
+    section#planos .content header {
+        margin-bottom: 8rem;
+    }
+
+    section#planos .content header h2 {
+        font-size: 5.5rem;
+    }
+
+    section#planos .content .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section#planos .content .cards .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    section#planos .content .cards .card .price {
+        margin-top: 1rem;
+    }
+
+    section#planos .content .cards .card .price h4 {
+        font-size: 7rem;
+    }
+
+    section#planos .content .cards .card a {
+        width: 100%;
+    }
+}
